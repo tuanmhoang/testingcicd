@@ -1,6 +1,10 @@
 pipeline {
     agent any
     
+    parameters {
+        string(name: 'nameOfJob', defaultValue: 'BuilderApp', description: 'Name of the job')
+    }
+    
     stages {
         stage('Prepare') {
             steps {
